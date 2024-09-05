@@ -120,6 +120,12 @@ html.dark {
   --code-shadow: 0 0 0 1px #333;
   --primary-rgb: 255, 255, 255;
   --primary-text-rgb: 0, 0, 0;
+  --nav-bg-rgb: 24, 24, 24;
+  --nav-text-rgb: 255, 255, 255;
+  --nav-hover-rgb: 31, 31, 31;
+  --nav-pressed-rgb: 38, 38, 38;
+  --nav-active-rgb: 255, 255, 255;
+  --nav-active-text-rgb: 0, 0, 0;
 }
 
 html.dark img:not(.no-dark-shadow), html.dark svg:not(.no-dark-shadow) {
@@ -429,18 +435,17 @@ html.mobile .XDocsPage .XDocsPageContent {
   align-items: center;
 }
 .XDocsPage .XDocsPageContent .XDocsPageContentBcFw a {
-  background-color: rgb(var(--bg-rgb));
-  border: 1px solid rgb(var(--border-rgb));
+  background-color: rgb(var(--nav-bg-rgb));
   padding: 0.5rem 1rem;
   border-radius: 0.5rem;
   text-decoration: none;
-  color: rgb(var(--text-rgb));
+  color: rgb(var(--nav-text-rgb));
 }
 .XDocsPage .XDocsPageContent .XDocsPageContentBcFw a:hover {
-  background-color: rgb(var(--hover-rgb));
+  background-color: rgb(var(--nav-hover-rgb));
 }
 .XDocsPage .XDocsPageContent .XDocsPageContentBcFw a:active {
-  background-color: rgb(var(--pressed-rgb));
+  background-color: rgb(var(--nav-pressed-rgb));
 }
 .XDocsPage .XDocsPageContent .XDocsPageContentBcFw a[data-is-next=true] {
   margin-left: auto;
