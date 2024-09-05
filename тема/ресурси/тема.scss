@@ -209,6 +209,7 @@ html.mobile [data-hidden-on-mobile=true] {
       left: 0;
       width: 100%;
       border-right: none;
+      border-radius: 0;
     }
 
     .XDocsPageNavigationItem:not(:first-child) {
@@ -436,9 +437,6 @@ html.mobile [data-hidden-on-mobile=true] {
     background-color: rgba(var(--nav-bg-rgb), 0.5);
     border: none;
     border-radius: 2px;
-    background-image: radial-gradient(transparent 1px, rgb(var(--bg-rgb)) 1px);
-    background-size: 4px 4px;
-    backdrop-filter: saturate(50%) blur(4px);
     color: rgb(var(--text-rgb));
 
     @at-root html.mobile & {

@@ -189,6 +189,7 @@ html.mobile .XDocsPage .XDocsPageNavigation {
   left: 0;
   width: 100%;
   border-right: none;
+  border-radius: 0;
 }
 
 .XDocsPage .XDocsPageNavigation .XDocsPageNavigationItem:not(:first-child) {
@@ -380,9 +381,6 @@ html.mobile .XDocsPage .XDocsPageNavigation .XDocsPageNavigationFooter {
   background-color: rgba(var(--nav-bg-rgb), 0.5);
   border: none;
   border-radius: 2px;
-  background-image: radial-gradient(transparent 1px, rgb(var(--bg-rgb)) 1px);
-  background-size: 4px 4px;
-  backdrop-filter: saturate(50%) blur(4px);
   color: rgb(var(--text-rgb));
 }
 html.mobile .XDocsPage .XDocsPageMobileNavigationToggle {
