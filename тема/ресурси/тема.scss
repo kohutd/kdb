@@ -682,8 +682,8 @@ table {
 }
 
 blockquote {
-  background: rgba(var(--blue-rgb), 0.125);
-  border-left: 0.25rem solid rgb(var(--blue-rgb));
+  background: rgba(var(--text-rgb), 0.125);
+  border-left: 0.25rem solid rgb(var(--text-rgb));
   padding: 0.25rem 1rem;
   margin: 1rem 0;
 }
