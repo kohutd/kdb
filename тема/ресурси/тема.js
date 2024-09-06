@@ -1,78 +1,78 @@
 function enableMobileMode() {
-  document.documentElement.classList.add("mobile");
+    document.documentElement.classList.add("mobile");
 }
 
 function disableMobileMode() {
-  document.documentElement.classList.remove("mobile");
+    document.documentElement.classList.remove("mobile");
 }
 
 function checkMobileMode() {
-  if (window.innerWidth < 950) {
-    enableMobileMode();
-  }
-  if (window.innerWidth >= 950) {
-    disableMobileMode();
-  }
+    if (window.innerWidth < 950) {
+        enableMobileMode();
+    }
+    if (window.innerWidth >= 950) {
+        disableMobileMode();
+    }
 }
 
 checkMobileMode();
 
 window.addEventListener("resize", () => {
-  checkMobileMode();
+    checkMobileMode();
 });
 
 function enableDarkMode() {
-  document.documentElement.classList.add("dark");
+    document.documentElement.classList.add("dark");
 }
 
 function disableDarkMode() {
-  document.documentElement.classList.remove("dark");
+    document.documentElement.classList.remove("dark");
 }
 
 function checkDarkMode() {
-  const currentMode = localStorage.getItem("kdb_ukr_light_mode");
-  if (currentMode === "auto") {
-    if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-      enableDarkMode();
-    } else {
-      disableDarkMode();
+    const currentMode = localStorage.getItem("kdb_ukr_light_mode");
+    if (currentMode === "auto") {
+        if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+            enableDarkMode();
+        } else {
+            disableDarkMode();
+        }
+        document.querySelectorAll(`[data-navigation-light-toggle-badge-auto=true]`).forEach((el) => {
+            el.style.display = "block";
+        });
+        document.querySelectorAll(`[data-navigation-light-toggle-badge-yes=true]`).forEach((el) => {
+            el.style.display = "none";
+        });
+        document.querySelectorAll(`[data-navigation-light-toggle-badge-no=true]`).forEach((el) => {
+            el.style.display = "none";
+        });
+    } else if (currentMode === "light") {
+        disableDarkMode();
+        document.querySelectorAll(`[data-navigation-light-toggle-badge-auto=true]`).forEach((el) => {
+            el.style.display = "none";
+        });
+        document.querySelectorAll(`[data-navigation-light-toggle-badge-yes=true]`).forEach((el) => {
+            el.style.display = "block";
+        });
+        document.querySelectorAll(`[data-navigation-light-toggle-badge-no=true]`).forEach((el) => {
+            el.style.display = "none";
+        });
+    } else if (currentMode === "dark") {
+        enableDarkMode();
+        document.querySelectorAll(`[data-navigation-light-toggle-badge-auto=true]`).forEach((el) => {
+            el.style.display = "none";
+        });
+        document.querySelectorAll(`[data-navigation-light-toggle-badge-yes=true]`).forEach((el) => {
+            el.style.display = "none";
+        });
+        document.querySelectorAll(`[data-navigation-light-toggle-badge-no=true]`).forEach((el) => {
+            el.style.display = "block";
+        });
     }
-    document.querySelectorAll(`[data-navigation-light-toggle-badge-auto=true]`).forEach((el) => {
-      el.style.display = "block";
-    });
-    document.querySelectorAll(`[data-navigation-light-toggle-badge-yes=true]`).forEach((el) => {
-      el.style.display = "none";
-    });
-    document.querySelectorAll(`[data-navigation-light-toggle-badge-no=true]`).forEach((el) => {
-      el.style.display = "none";
-    });
-  } else if (currentMode === "light") {
-    disableDarkMode();
-    document.querySelectorAll(`[data-navigation-light-toggle-badge-auto=true]`).forEach((el) => {
-      el.style.display = "none";
-    });
-    document.querySelectorAll(`[data-navigation-light-toggle-badge-yes=true]`).forEach((el) => {
-      el.style.display = "block";
-    });
-    document.querySelectorAll(`[data-navigation-light-toggle-badge-no=true]`).forEach((el) => {
-      el.style.display = "none";
-    });
-  } else if (currentMode === "dark") {
-    enableDarkMode();
-    document.querySelectorAll(`[data-navigation-light-toggle-badge-auto=true]`).forEach((el) => {
-      el.style.display = "none";
-    });
-    document.querySelectorAll(`[data-navigation-light-toggle-badge-yes=true]`).forEach((el) => {
-      el.style.display = "none";
-    });
-    document.querySelectorAll(`[data-navigation-light-toggle-badge-no=true]`).forEach((el) => {
-      el.style.display = "block";
-    });
-  }
 }
 
 if (!localStorage.getItem("kdb_ukr_light_mode")) {
-  localStorage.setItem("kdb_ukr_light_mode", "auto");
+    localStorage.setItem("kdb_ukr_light_mode", "auto");
 }
 
 document.querySelector(".XDocsPageNavigationFooter").innerHTML += `<button class="XDocsPageNavigationFooterConfigButton">
@@ -84,135 +84,135 @@ document.querySelector(".XDocsPageNavigationFooter").innerHTML += `<button class
 checkDarkMode();
 
 document.querySelector(".XDocsPageNavigationFooterConfigButton").addEventListener("click", () => {
-  const currentMode = localStorage.getItem("kdb_ukr_light_mode");
-  if (currentMode === "auto") {
-    localStorage.setItem("kdb_ukr_light_mode", "light");
-  } else if (currentMode === "light") {
-    localStorage.setItem("kdb_ukr_light_mode", "dark");
-  } else {
-    localStorage.setItem("kdb_ukr_light_mode", "auto");
-  }
-  checkDarkMode();
+    const currentMode = localStorage.getItem("kdb_ukr_light_mode");
+    if (currentMode === "auto") {
+        localStorage.setItem("kdb_ukr_light_mode", "light");
+    } else if (currentMode === "light") {
+        localStorage.setItem("kdb_ukr_light_mode", "dark");
+    } else {
+        localStorage.setItem("kdb_ukr_light_mode", "auto");
+    }
+    checkDarkMode();
 });
 
 document.querySelector(".XDocsPageNavigationSearch button").addEventListener("click", () => {
-  const $searchInput = document.createElement("input");
-  $searchInput.classList.add("XDocsSearchInput");
-  $searchInput.setAttribute("type", "text");
-  $searchInput.setAttribute("placeholder", "Пошук");
-  $searchInput.addEventListener("input", () => {
-    const searchValue = $searchInput.value.trim();
-    window.searchDocs(searchValue).then((result) => {
-      if (result.length === 0) {
-        renderEmpty();
-      } else {
-        renderResult(result);
-      }
+    const $searchInput = document.createElement("input");
+    $searchInput.classList.add("XDocsSearchInput");
+    $searchInput.setAttribute("type", "text");
+    $searchInput.setAttribute("placeholder", "Пошук");
+    $searchInput.addEventListener("input", () => {
+        const searchValue = $searchInput.value.trim();
+        window.searchDocs(searchValue).then((result) => {
+            if (result.length === 0) {
+                renderEmpty();
+            } else {
+                renderResult(result);
+            }
+        });
     });
-  });
-  $searchInput.addEventListener("keydown", (e) => {
-    if (e.key === "ArrowDown") {
-      const $firstItem = $searchResults.firstElementChild;
-      if ($firstItem) {
-        $firstItem.focus();
-        e.preventDefault();
-        e.stopPropagation();
-      } else {
-        $searchInput.focus();
-        e.preventDefault();
-        e.stopPropagation();
-      }
-    }
-    if (e.key === "ArrowUp") {
-      const $lastItem = $searchResults.lastElementChild;
-      if ($lastItem) {
-        $lastItem.focus();
-        e.preventDefault();
-        e.stopPropagation();
-      } else {
-        $searchInput.focus();
-        e.preventDefault();
-        e.stopPropagation();
-      }
-    }
-  }, false);
-
-  const $searchResults = document.createElement("div");
-  $searchResults.classList.add("XDocsSearchResults");
-  $searchResults.classList.add("empty");
-  $searchResults.innerHTML = "Введіть запит для пошуку";
-
-  const pathPrefix = document.querySelector("meta[name=\"xdocs-url-prefix\"]").getAttribute("content");
-
-  function renderResult(result) {
-    $searchResults.classList.remove("empty");
-    $searchResults.innerHTML = "";
-    result.forEach((item) => {
-      const $searchResultItem = document.createElement("a");
-      $searchResultItem.classList.add("XDocsSearchResultItem");
-      $searchResultItem.setAttribute("href", pathPrefix + item.path);
-      $searchResultItem.innerHTML = item.title;
-      $searchResults.appendChild($searchResultItem);
-
-      $searchResultItem.addEventListener("keydown", (e) => {
+    $searchInput.addEventListener("keydown", (e) => {
         if (e.key === "ArrowDown") {
-          const $nextItem = $searchResultItem.nextElementSibling;
-          if ($nextItem) {
-            $nextItem.focus();
-            e.preventDefault();
-            e.stopPropagation();
-          } else {
-            $searchInput.focus();
-            e.preventDefault();
-            e.stopPropagation();
-          }
+            const $firstItem = $searchResults.firstElementChild;
+            if ($firstItem) {
+                $firstItem.focus();
+                e.preventDefault();
+                e.stopPropagation();
+            } else {
+                $searchInput.focus();
+                e.preventDefault();
+                e.stopPropagation();
+            }
         }
         if (e.key === "ArrowUp") {
-          const $prevItem = $searchResultItem.previousElementSibling;
-          if ($prevItem) {
-            $prevItem.focus();
-            e.preventDefault();
-            e.stopPropagation();
-          } else {
-            $searchInput.focus();
-            e.preventDefault();
-            e.stopPropagation();
-          }
+            const $lastItem = $searchResults.lastElementChild;
+            if ($lastItem) {
+                $lastItem.focus();
+                e.preventDefault();
+                e.stopPropagation();
+            } else {
+                $searchInput.focus();
+                e.preventDefault();
+                e.stopPropagation();
+            }
         }
-      }, false);
-    });
-  }
+    }, false);
 
-  function renderEmpty() {
+    const $searchResults = document.createElement("div");
+    $searchResults.classList.add("XDocsSearchResults");
     $searchResults.classList.add("empty");
-    $searchResults.innerHTML = "Нічого не знайдено";
-  }
+    $searchResults.innerHTML = "Введіть запит для пошуку";
 
-  const $searchContainer = document.createElement("div");
-  $searchContainer.classList.add("XDocsSearchContainer");
-  $searchContainer.appendChild($searchInput);
-  $searchContainer.appendChild($searchResults);
+    const pathPrefix = document.querySelector("meta[name=\"xdocs-url-prefix\"]").getAttribute("content");
 
-  const $searchWrapper = document.createElement("div");
-  $searchWrapper.classList.add("XDocsSearchWrapper");
-  $searchWrapper.appendChild($searchContainer);
+    function renderResult(result) {
+        $searchResults.classList.remove("empty");
+        $searchResults.innerHTML = "";
+        result.forEach((item) => {
+            const $searchResultItem = document.createElement("a");
+            $searchResultItem.classList.add("XDocsSearchResultItem");
+            $searchResultItem.setAttribute("href", pathPrefix + item.path);
+            $searchResultItem.innerHTML = item.title;
+            $searchResults.appendChild($searchResultItem);
 
-  $searchWrapper.addEventListener("click", (e) => {
-    if (e.target === $searchWrapper) {
-      $searchWrapper.remove();
+            $searchResultItem.addEventListener("keydown", (e) => {
+                if (e.key === "ArrowDown") {
+                    const $nextItem = $searchResultItem.nextElementSibling;
+                    if ($nextItem) {
+                        $nextItem.focus();
+                        e.preventDefault();
+                        e.stopPropagation();
+                    } else {
+                        $searchInput.focus();
+                        e.preventDefault();
+                        e.stopPropagation();
+                    }
+                }
+                if (e.key === "ArrowUp") {
+                    const $prevItem = $searchResultItem.previousElementSibling;
+                    if ($prevItem) {
+                        $prevItem.focus();
+                        e.preventDefault();
+                        e.stopPropagation();
+                    } else {
+                        $searchInput.focus();
+                        e.preventDefault();
+                        e.stopPropagation();
+                    }
+                }
+            }, false);
+        });
     }
-  });
-  $searchWrapper.addEventListener("keydown", (e) => {
-    if (e.key === "Escape") {
-      $searchWrapper.remove();
-      e.preventDefault();
-      e.stopPropagation();
+
+    function renderEmpty() {
+        $searchResults.classList.add("empty");
+        $searchResults.innerHTML = "Нічого не знайдено";
     }
-  });
 
-  document.body.appendChild($searchWrapper);
+    const $searchContainer = document.createElement("div");
+    $searchContainer.classList.add("XDocsSearchContainer");
+    $searchContainer.appendChild($searchInput);
+    $searchContainer.appendChild($searchResults);
 
-  $searchInput.focus();
+    const $searchWrapper = document.createElement("div");
+    $searchWrapper.classList.add("XDocsSearchWrapper");
+    $searchWrapper.appendChild($searchContainer);
+
+    $searchWrapper.addEventListener("click", (e) => {
+        if (e.target === $searchWrapper) {
+            $searchWrapper.remove();
+        }
+    });
+    $searchWrapper.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") {
+            $searchWrapper.remove();
+            e.preventDefault();
+            e.stopPropagation();
+        }
+    });
+
+    document.body.appendChild($searchWrapper);
+
+    $searchInput.focus();
 });
 
 const $spaceBeforeFooterWrapper = document.createElement("div");
@@ -223,7 +223,17 @@ document.querySelector(".XDocsPageNavigationFooterWrapper").insertAdjacentElemen
 const $activeMenuItem = document.querySelector(".XDocsPageNavigation .active");
 
 if ($activeMenuItem && $activeMenuItem.scrollIntoView) {
-  $activeMenuItem.scrollIntoView({
-    block: "center"
-  });
+    $activeMenuItem.scrollIntoView({
+        block: "center"
+    });
 }
+
+const $tables = document.querySelectorAll("table");
+
+$tables.forEach(($table) => {
+    // wrap with div
+    const $tableWrapper = document.createElement("div");
+    $tableWrapper.classList.add("XDocsTableWrapper");
+    $table.insertAdjacentElement("beforebegin", $tableWrapper);
+    $tableWrapper.appendChild($table);
+});
