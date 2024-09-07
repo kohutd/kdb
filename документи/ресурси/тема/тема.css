@@ -100,9 +100,10 @@
 }
 
 html {
+  --font-family: "Roboto", sans-serif;
   width: 100%;
   height: 100%;
-  font-family: Roboto, sans-serif;
+  font-family: var(--font-family);
   background: rgb(var(--bg-rgb));
   color: rgb(var(--text-rgb));
   font-feature-settings: "liga" 0;
@@ -135,7 +136,7 @@ html.dark img:not(.no-dark-shadow), html.dark svg:not(.no-dark-shadow) {
 }
 
 button {
-  font-family: Roboto, sans-serif;
+  font-family: var(--font-family);
 }
 
 body {
@@ -668,7 +669,7 @@ hr.table {
   border: none;
   border-bottom: 1px solid rgb(var(--border-rgb));
   outline: none;
-  font-family: Roboto, sans-serif;
+  font-family: var(--font-family);
   background-color: rgb(var(--bg-rgb));
   color: rgb(var(--text-rgb));
 }
