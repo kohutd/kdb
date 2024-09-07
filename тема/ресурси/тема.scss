@@ -382,7 +382,16 @@ html.mobile [data-hidden-on-mobile=true] {
 
     .XDocsPageNavigationSubmenu {
       border-radius: 0.5rem;
-      overflow: hidden;
+
+      .XDocsPageNavigationSubmenuItem:first-child {
+        border-top-left-radius: 0.5rem;
+        border-top-right-radius: 0.5rem;
+      }
+
+      .XDocsPageNavigationSubmenuItem:last-child {
+        border-bottom-left-radius: 0.5rem;
+        border-bottom-right-radius: 0.5rem;
+      }
 
       .XDocsPageNavigationSubmenuItem {
         padding: 0.5rem 1rem;
