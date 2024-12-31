@@ -9,10 +9,10 @@
 // №
 
 const charDefinitions = [
-    [0, "Ніщо"],
-    [0, "Початок передачі"],
-    [0, "Виконати вказівку"],
-    [0, "Кінець передачі"],
+    [undefined, "Ніщо"],
+    [undefined, "Початок передачі"],
+    [undefined, "Виконати вказівку"],
+    [undefined, "Кінець передачі"],
 
     ['[', "Відкрита квадратна дужка"],
     ['{', "Відкрита фігурна дужка"],
@@ -24,7 +24,7 @@ const charDefinitions = [
     ['*', "Зірочка"],
     ['+', "Хрестик"],
     ['₴', "Гривня"],
-    ['$', "Долар"],
+    [undefined, "Дія", `<svg class="no-dark-shadow" style="max-height: 1rem; max-width: 1rem;" width="151" height="151" viewBox="0 0 151 151" fill="none" xmlns="http://www.w3.org/2000/svg"><rect y="69.5881" width="21.2253" height="63.676" transform="rotate(-45 0 69.5881)" fill="currentColor"/><rect x="69.5881" y="151" width="21.2253" height="63.676" transform="rotate(-135 69.5881 151)" fill="currentColor"/><rect x="151" y="81.4121" width="21.2253" height="63.676" transform="rotate(135 151 81.4121)" fill="currentColor"/><rect x="81.412" width="21.2253" height="63.676" transform="rotate(45 81.412 0)" fill="currentColor"/></svg>`],
     ['∑', "Енергія"],
 
     ['0', "Нуль"],
@@ -123,20 +123,19 @@ const charDefinitions = [
     ['|', "Пряма"],
     ['\\', "Обернена коса"],
     ['&', "Амперсанд"],
+    ['$', "Долар"],
     ['%', "Відсоток"],
     ['^', "Пірамідка"],
     ['~', "Тильда"],
     ['=', "Рівно"],
     ['∞', "Нескінченність"],
-    
-    [0, "НЕ ВИЗНАЧЕНО"],
-    [0, "НЕ ВИЗНАЧЕНО"],
-    [0, "НЕ ВИЗНАЧЕНО"],
-    [0, "НЕ ВИЗНАЧЕНО"],
-    [0, "НЕ ВИЗНАЧЕНО"],
-    [0, "НЕ ВИЗНАЧЕНО"],
-    [0, "НЕ ВИЗНАЧЕНО"],
-    [0, "НЕ ВИЗНАЧЕНО"],
+
+    [undefined, ""],
+    [undefined, ""],
+    [undefined, ""],
+    [undefined, ""],
+    [undefined, ""],
+    [undefined, ""],
 
     ['>', "Більше"],
     [')', "Закрита дужка"],
@@ -149,10 +148,12 @@ const charDefinitions = [
 
 const textEncoder = new TextEncoder();
 
-const lines = charDefinitions.map(([char, definition], index) => {
+const lines = charDefinitions.map(([char, definition, logo], index) => {
     const columns = [];
     columns.push(definition);
-    if (char) {
+    if (logo) {
+        columns.push(logo);
+    } else if (char) {
         columns.push(char[0].replaceAll('\n', '').replaceAll('\\', '\\\\').replaceAll('>', '\\>').replaceAll('<', '\\<').replaceAll('[', '\\[').replaceAll('|', '\\|'));
     } else {
         columns.push('');
