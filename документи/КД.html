@@ -118,12 +118,9 @@
   <div class="XDocsPageContent">
     
     <h1>Кодування Д</h1>
-<p><strong>Кодування Д</strong> (<strong>Дельтакод</strong>) надає визначення 120+ символів для кодування українського тексту.
-<strong>КД</strong> підтримує деякі вже загальновживані символи з інших систем кодування. <strong>КД</strong> також визначає три символи-команди,
-які можна використовувати для обміну інформацією.</p>
-<blockquote>
-<p><strong>Кодування Д</strong> все ще не стабільне і може трошки змінитись до кінця січня 2025 року.</p>
-</blockquote>
+<p><strong>Кодування Д</strong> (<strong>Дельтакод</strong>) надає визначення 128 символів для збереження та обміну цифрової інформації українською
+мовою.
+<strong>КД</strong> підтримує деякі вже загальновживані символи з інших систем кодування.</p>
 <table>
 <thead>
 <tr>
@@ -137,7 +134,7 @@
 </thead>
 <tbody>
 <tr>
-<td></td>
+<td>Кінець</td>
 <td></td>
 <td>0</td>
 <td><small>0ш</small>0</td>
@@ -145,7 +142,7 @@
 <td></td>
 </tr>
 <tr>
-<td></td>
+<td>Початок</td>
 <td></td>
 <td>1</td>
 <td><small>0ш</small>1</td>
@@ -153,7 +150,7 @@
 <td></td>
 </tr>
 <tr>
-<td></td>
+<td>Передвказівка</td>
 <td></td>
 <td>2</td>
 <td><small>0ш</small>2</td>
@@ -161,12 +158,12 @@
 <td></td>
 </tr>
 <tr>
-<td></td>
+<td>Міжряд</td>
 <td></td>
 <td>3</td>
 <td><small>0ш</small>3</td>
 <td><small>0д</small>11</td>
-<td></td>
+<td>10</td>
 </tr>
 <tr>
 <td>Відкрита квадратна дужка</td>
@@ -225,12 +222,12 @@
 <td>64</td>
 </tr>
 <tr>
-<td>Зірочка</td>
-<td>*</td>
+<td>Номер</td>
+<td>№</td>
 <td>11</td>
 <td><small>0ш</small>Б</td>
 <td><small>0д</small>1011</td>
-<td>42</td>
+<td>8470 <small>[226, 132, 150]</small></td>
 </tr>
 <tr>
 <td>Хрестик</td>
@@ -369,7 +366,7 @@
 <td>96</td>
 </tr>
 <tr>
-<td>Низориска</td>
+<td>Підриска</td>
 <td>_</td>
 <td>29</td>
 <td><small>0ш</small>1Г</td>
@@ -377,20 +374,20 @@
 <td>95</td>
 </tr>
 <tr>
-<td>Апостроф</td>
-<td>ʼ</td>
+<td>Риска</td>
+<td>-</td>
 <td>30</td>
 <td><small>0ш</small>1Д</td>
 <td><small>0д</small>11110</td>
-<td>700 <small>[202, 188]</small></td>
+<td>45</td>
 </tr>
 <tr>
-<td>Риска</td>
-<td>-</td>
+<td>Апостроф</td>
+<td>ʼ</td>
 <td>31</td>
 <td><small>0ш</small>1Е</td>
 <td><small>0д</small>11111</td>
-<td>45</td>
+<td>700 <small>[202, 188]</small></td>
 </tr>
 <tr>
 <td>Велика буква &quot;А&quot;</td>
@@ -913,212 +910,212 @@
 <td>1168 <small>[210, 144]</small></td>
 </tr>
 <tr>
-<td>Мала буква &quot;ґ&quot;</td>
-<td>ґ</td>
+<td>Велика буква &quot;ё&quot;</td>
+<td>Ё</td>
 <td>97</td>
 <td><small>0ш</small>61</td>
 <td><small>0д</small>1100001</td>
-<td>1169 <small>[210, 145]</small></td>
+<td>1025 <small>[208, 129]</small></td>
 </tr>
 <tr>
-<td>Велика буква &quot;Ґ&quot;</td>
-<td>Ґ</td>
+<td>Велика буква &quot;ъ&quot;</td>
+<td>Ъ</td>
 <td>98</td>
 <td><small>0ш</small>62</td>
 <td><small>0д</small>1100010</td>
-<td>1168 <small>[210, 144]</small></td>
+<td>1066 <small>[208, 170]</small></td>
+</tr>
+<tr>
+<td>Велика буква &quot;ы&quot;</td>
+<td>Ы</td>
+<td>99</td>
+<td><small>0ш</small>63</td>
+<td><small>0д</small>1100011</td>
+<td>1067 <small>[208, 171]</small></td>
+</tr>
+<tr>
+<td>Велика буква &quot;э&quot;</td>
+<td>Э</td>
+<td>100</td>
+<td><small>0ш</small>64</td>
+<td><small>0д</small>1100100</td>
+<td>1069 <small>[208, 173]</small></td>
 </tr>
 <tr>
 <td>Мала буква &quot;ґ&quot;</td>
 <td>ґ</td>
-<td>99</td>
-<td><small>0ш</small>63</td>
-<td><small>0д</small>1100011</td>
+<td>101</td>
+<td><small>0ш</small>65</td>
+<td><small>0д</small>1100101</td>
 <td>1169 <small>[210, 145]</small></td>
+</tr>
+<tr>
+<td>Мала буква &quot;ё&quot;</td>
+<td>ё</td>
+<td>102</td>
+<td><small>0ш</small>66</td>
+<td><small>0д</small>1100110</td>
+<td>1105 <small>[209, 145]</small></td>
+</tr>
+<tr>
+<td>Мала буква &quot;ъ&quot;</td>
+<td>ъ</td>
+<td>103</td>
+<td><small>0ш</small>67</td>
+<td><small>0д</small>1100111</td>
+<td>1098 <small>[209, 138]</small></td>
+</tr>
+<tr>
+<td>Мала буква &quot;ы&quot;</td>
+<td>ы</td>
+<td>104</td>
+<td><small>0ш</small>68</td>
+<td><small>0д</small>1101000</td>
+<td>1099 <small>[209, 139]</small></td>
+</tr>
+<tr>
+<td>Мала буква &quot;э&quot;</td>
+<td>э</td>
+<td>105</td>
+<td><small>0ш</small>69</td>
+<td><small>0д</small>1101001</td>
+<td>1101 <small>[209, 141]</small></td>
 </tr>
 <tr>
 <td>Кома</td>
 <td>,</td>
-<td>100</td>
-<td><small>0ш</small>64</td>
-<td><small>0д</small>1100100</td>
+<td>106</td>
+<td><small>0ш</small>6А</td>
+<td><small>0д</small>1101010</td>
 <td>44</td>
 </tr>
 <tr>
 <td>Двокрапка</td>
 <td>:</td>
-<td>101</td>
-<td><small>0ш</small>65</td>
-<td><small>0д</small>1100101</td>
+<td>107</td>
+<td><small>0ш</small>6Б</td>
+<td><small>0д</small>1101011</td>
 <td>58</td>
 </tr>
 <tr>
 <td>Крапкакома</td>
 <td>;</td>
-<td>102</td>
-<td><small>0ш</small>66</td>
-<td><small>0д</small>1100110</td>
+<td>108</td>
+<td><small>0ш</small>6В</td>
+<td><small>0д</small>1101100</td>
 <td>59</td>
 </tr>
 <tr>
 <td>Крапка</td>
 <td>.</td>
-<td>103</td>
-<td><small>0ш</small>67</td>
-<td><small>0д</small>1100111</td>
+<td>109</td>
+<td><small>0ш</small>6Г</td>
+<td><small>0д</small>1101101</td>
 <td>46</td>
 </tr>
 <tr>
 <td>Питання</td>
 <td>?</td>
-<td>104</td>
-<td><small>0ш</small>68</td>
-<td><small>0д</small>1101000</td>
+<td>110</td>
+<td><small>0ш</small>6Д</td>
+<td><small>0д</small>1101110</td>
 <td>63</td>
 </tr>
 <tr>
 <td>Оклик</td>
 <td>!</td>
-<td>105</td>
-<td><small>0ш</small>69</td>
-<td><small>0д</small>1101001</td>
+<td>111</td>
+<td><small>0ш</small>6Е</td>
+<td><small>0д</small>1101111</td>
 <td>33</td>
+</tr>
+<tr>
+<td>Долар</td>
+<td>$</td>
+<td>112</td>
+<td><small>0ш</small>70</td>
+<td><small>0д</small>1110000</td>
+<td>36</td>
+</tr>
+<tr>
+<td>Відсоток</td>
+<td>%</td>
+<td>113</td>
+<td><small>0ш</small>71</td>
+<td><small>0д</small>1110001</td>
+<td>37</td>
+</tr>
+<tr>
+<td>Градус</td>
+<td>°</td>
+<td>114</td>
+<td><small>0ш</small>72</td>
+<td><small>0д</small>1110010</td>
+<td>176 <small>[194, 176]</small></td>
+</tr>
+<tr>
+<td>Зірочка</td>
+<td>*</td>
+<td>115</td>
+<td><small>0ш</small>73</td>
+<td><small>0д</small>1110011</td>
+<td>42</td>
 </tr>
 <tr>
 <td>Коса</td>
 <td>/</td>
-<td>106</td>
-<td><small>0ш</small>6А</td>
-<td><small>0д</small>1101010</td>
+<td>116</td>
+<td><small>0ш</small>74</td>
+<td><small>0д</small>1110100</td>
 <td>47</td>
 </tr>
 <tr>
 <td>Пряма</td>
 <td>|</td>
-<td>107</td>
-<td><small>0ш</small>6Б</td>
-<td><small>0д</small>1101011</td>
+<td>117</td>
+<td><small>0ш</small>75</td>
+<td><small>0д</small>1110101</td>
 <td>124</td>
 </tr>
 <tr>
 <td>Обернена коса</td>
 <td>\</td>
-<td>108</td>
-<td><small>0ш</small>6В</td>
-<td><small>0д</small>1101100</td>
+<td>118</td>
+<td><small>0ш</small>76</td>
+<td><small>0д</small>1110110</td>
 <td>92</td>
 </tr>
 <tr>
 <td>Амперсанд</td>
 <td>&amp;</td>
-<td>109</td>
-<td><small>0ш</small>6Г</td>
-<td><small>0д</small>1101101</td>
+<td>119</td>
+<td><small>0ш</small>77</td>
+<td><small>0д</small>1110111</td>
 <td>38</td>
-</tr>
-<tr>
-<td>Відсоток</td>
-<td>%</td>
-<td>110</td>
-<td><small>0ш</small>6Д</td>
-<td><small>0д</small>1101110</td>
-<td>37</td>
 </tr>
 <tr>
 <td>Пірамідка</td>
 <td>^</td>
-<td>111</td>
-<td><small>0ш</small>6Е</td>
-<td><small>0д</small>1101111</td>
+<td>120</td>
+<td><small>0ш</small>78</td>
+<td><small>0д</small>1111000</td>
 <td>94</td>
 </tr>
 <tr>
 <td>Тильда</td>
 <td>~</td>
-<td>112</td>
-<td><small>0ш</small>70</td>
-<td><small>0д</small>1110000</td>
+<td>121</td>
+<td><small>0ш</small>79</td>
+<td><small>0д</small>1111001</td>
 <td>126</td>
 </tr>
 <tr>
 <td>Рівно</td>
 <td>=</td>
-<td>113</td>
-<td><small>0ш</small>71</td>
-<td><small>0д</small>1110001</td>
-<td>61</td>
-</tr>
-<tr>
-<td>Нескінченність</td>
-<td>∞</td>
-<td>114</td>
-<td><small>0ш</small>72</td>
-<td><small>0д</small>1110010</td>
-<td>8734 <small>[226, 136, 158]</small></td>
-</tr>
-<tr>
-<td>Долар</td>
-<td>$</td>
-<td>115</td>
-<td><small>0ш</small>73</td>
-<td><small>0д</small>1110011</td>
-<td>36</td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td>116</td>
-<td><small>0ш</small>74</td>
-<td><small>0д</small>1110100</td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td>117</td>
-<td><small>0ш</small>75</td>
-<td><small>0д</small>1110101</td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td>118</td>
-<td><small>0ш</small>76</td>
-<td><small>0д</small>1110110</td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td>119</td>
-<td><small>0ш</small>77</td>
-<td><small>0д</small>1110111</td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td>120</td>
-<td><small>0ш</small>78</td>
-<td><small>0д</small>1111000</td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td>121</td>
-<td><small>0ш</small>79</td>
-<td><small>0д</small>1111001</td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
 <td>122</td>
 <td><small>0ш</small>7А</td>
 <td><small>0д</small>1111010</td>
-<td></td>
+<td>61</td>
 </tr>
 <tr>
 <td>Більше</td>
@@ -1159,30 +1156,6 @@
 <td><small>0ш</small>7Е</td>
 <td><small>0д</small>1111111</td>
 <td>32</td>
-</tr>
-<tr>
-<td>Міжряд</td>
-<td></td>
-<td>128</td>
-<td><small>0ш</small>80</td>
-<td><small>0д</small>10000000</td>
-<td>10</td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td>129</td>
-<td><small>0ш</small>81</td>
-<td><small>0д</small>10000001</td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td>130</td>
-<td><small>0ш</small>82</td>
-<td><small>0д</small>10000010</td>
-<td></td>
 </tr>
 </tbody>
 </table>
