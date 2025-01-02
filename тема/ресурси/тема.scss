@@ -835,3 +835,15 @@ hr {
 .XDocsTableWrapper {
   overflow-x: auto;
 }
+
+.kd-icon {
+  height: 14px;
+  width: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  svg {
+    transform: scale(2);
+  }
+}

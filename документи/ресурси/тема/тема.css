@@ -721,4 +721,15 @@ hr.table {
   overflow-x: auto;
 }
 
+.kd-icon {
+  height: 14px;
+  width: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.kd-icon svg {
+  transform: scale(2);
+}
+
 /*# sourceMappingURL=%D1%82%D0%B5%D0%BC%D0%B0.css.map */
