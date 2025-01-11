@@ -43,7 +43,7 @@ const b = a
     .replaceAll('У', 'Оо')
     .replaceAll('з', 'z')
     .replaceAll('З', 'Z')
-    .replaceAll('н', 'n')
+    .replaceAll('н', 'н')
     .replaceAll('Н', 'N');
 
 console.log(b);
