@@ -6,7 +6,7 @@ const a = `
 "Бачте, Лебедка біла як сніжок!
 А ми такі гидкі,
 Чорні і бридкі".
-Стрімголов не берег впали,
+Стрімголов на берег впали,
 В дзьоби болота набрали
 І стали згори метати,
 Білу Лебедку нуряти.
@@ -23,7 +23,7 @@ const b = a
     .replaceAll('ʼ', '')
     .replaceAll('в', 'v')
     .replaceAll('є', 'іе')
-    .replaceAll('ж', 'шз')
+    .replaceAll('ж', 'zz')
     .replaceAll('ї', 'іі')
     .replaceAll('й', 'і')
     .replaceAll('ц', 'тс')
@@ -32,7 +32,7 @@ const b = a
     .replaceAll('я', 'іа')
     .replaceAll('В', 'V')
     .replaceAll('Є', 'Іе')
-    .replaceAll('Ж', 'Шз')
+    .replaceAll('Ж', 'Zz')
     .replaceAll('Ї', 'Іі')
     .replaceAll('Й', 'І')
     .replaceAll('Ц', 'Тс')
@@ -40,6 +40,10 @@ const b = a
     .replaceAll('Ю', 'Іу')
     .replaceAll('Я', 'Іа')
     .replaceAll('у', 'оо')
-    .replaceAll('У', 'Оо');
+    .replaceAll('У', 'Оо')
+    .replaceAll('з', 'z')
+    .replaceAll('З', 'Z')
+    .replaceAll('н', 'n')
+    .replaceAll('Н', 'N');
 
 console.log(b);
