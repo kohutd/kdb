@@ -36,6 +36,8 @@ const b = a
     .replaceAll('Ц', 'Тс')
     .replaceAll('Щ', 'Шч')
     .replaceAll('Ю', 'Іу')
-    .replaceAll('Я', 'Іа');
+    .replaceAll('Я', 'Іа')
+    .replaceAll('у', 'оо')
+    .replaceAll('У', 'Оо');
 
 console.log(b);
