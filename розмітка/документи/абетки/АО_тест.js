@@ -21,18 +21,16 @@ _Маркіян Шашкевич_
 const b = a
     .replaceAll('\'', '')
     .replaceAll('ʼ', '')
-    .replaceAll('в', 'v')
     .replaceAll('є', 'іе')
-    .replaceAll('ж', 'zz')
+    .replaceAll('ж', 'зз')
     .replaceAll('ї', 'іі')
     .replaceAll('й', 'і')
     .replaceAll('ц', 'тс')
     .replaceAll('щ', 'шч')
     .replaceAll('ю', 'іу')
     .replaceAll('я', 'іа')
-    .replaceAll('В', 'V')
     .replaceAll('Є', 'Іе')
-    .replaceAll('Ж', 'Zz')
+    .replaceAll('Ж', 'Зз')
     .replaceAll('Ї', 'Іі')
     .replaceAll('Й', 'І')
     .replaceAll('Ц', 'Тс')
@@ -40,10 +38,6 @@ const b = a
     .replaceAll('Ю', 'Іу')
     .replaceAll('Я', 'Іа')
     .replaceAll('у', 'оо')
-    .replaceAll('У', 'Оо')
-    .replaceAll('з', 'z')
-    .replaceAll('З', 'Z')
-    .replaceAll('н', 'н')
-    .replaceAll('Н', 'N');
+    .replaceAll('У', 'Оо');
 
 console.log(b);
