@@ -7,12 +7,10 @@ function getIcon(symbol) {
 
 const charDefinitions = [
     ['\0', "Кінець"],
-    ['\1', "Початок"],
-    ['\2', "Передвказівка"],
-    ['\n', "Розрив"],
-
-    [' ', "Пропуск"],
-
+    ['\1', "Дія", `<div style="display: flex; align-items: center">${getIcon('ДІЯ_1')}</div>`],
+    ['\2', "Початок"],
+    ['\n', "Міжряд"],
+    [' ', "Міжслово"],
     ['~', "Хвиляста", getIcon('~')],
     ['&', "І", getIcon('&')],
     ['%', "Відсоток", getIcon('%')],
@@ -22,7 +20,7 @@ const charDefinitions = [
     ['⊕', "Хрестик в кругу", getIcon('⊕')],
     ['+', "Хрестик", getIcon('+')],
     ['₴', "Гривня", getIcon('₴')],
-    ['卐', "Дія", `<div style="display: flex; align-items: center">${getIcon('ДІЯ')} ${getIcon('ДІЯ_1')}</div>`],
+    ['\3', "Невизначено"],
     ['*', "Зірочка", getIcon('*')],
 
     ['0', "Нуль", getIcon('0')],
