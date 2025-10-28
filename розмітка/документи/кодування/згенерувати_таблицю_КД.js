@@ -124,6 +124,7 @@ const charDefinitions = [
     [':', "Двокрапка", getIcon(':')],
     [';', "Крапкакома", getIcon(';')],
     ['~', "Хвиляста", getIcon('~')],
+    ['¯', "Надриска", getIcon('¯')],
     ['_', "Підриска", getIcon('_')],
     ['|', "Стояча", getIcon('|')],
     ['\\', "Обернена похила", getIcon('ОБЕРКОСА')],
@@ -135,9 +136,8 @@ const charDefinitions = [
     ['@', "Адреса", getIcon('@')],
     ['&', "І", getIcon('&')],
     ['§', "Секція", getIcon('§')],
-    ['⊕', "Хрестик в кругу", getIcon('⊕')],
     ['₴', "Гривня", getIcon('₴')],
-    ['\0',  ""],
+    ['⊕', "Хрестик в кругу", getIcon('⊕')],
     ['\0',  ""],
     ['\x7f', "Дія", `<div style="display: flex; align-items: center">${getIcon('ДІЯ_1')}</div>`],
 ];
