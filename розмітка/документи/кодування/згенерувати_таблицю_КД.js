@@ -144,8 +144,8 @@ const charDefinitions = [
     ['?', "Питання", getIcon('?')],
     ['!', "Оклик", getIcon('!')],
 
-    ['\0',  "TODO"],
-    ['\0',  "TODO"],
+    ['\0',  "ПОТІМ_1"],
+    ['\0',  "ПОТІМ_2"],
     [' ', "Пропуск"],
     ['\n', "Міжряд"],
     ['\x7f', "Дія", `<div style="display: flex; align-items: center">${getIcon('ДІЯ_1')}</div>`],
