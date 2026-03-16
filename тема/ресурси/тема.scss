@@ -108,7 +108,9 @@
   --nav-active-text-rgb: 255, 255, 255;
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   -webkit-tap-highlight-color: transparent;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -151,7 +153,8 @@ html.dark {
   --nav-active-text-rgb: 0, 0, 0;
 }
 
-html.dark img:not(.no-dark-shadow), html.dark svg:not(.no-dark-shadow) {
+html.dark img:not(.no-dark-shadow),
+html.dark svg:not(.no-dark-shadow) {
   filter: drop-shadow(0 0 1px white);
 }
 
@@ -166,7 +169,8 @@ body {
   height: 100%;
 }
 
-pre, code {
+pre,
+code {
   font-family: "Fira Code", monospace !important;
   font-weight: 500;
 }
@@ -175,17 +179,19 @@ a {
   color: rgb(var(--text-rgb));
 }
 
-subject, .XDocsTextSubject {
+subject,
+.XDocsTextSubject {
   color: #485cb0;
   font-weight: 500;
 }
 
-keyword, .XDocsTextKeyword {
+keyword,
+.XDocsTextKeyword {
   color: #c678dd;
   font-weight: 500;
 }
 
-html.mobile [data-hidden-on-mobile=true] {
+html.mobile [data-hidden-on-mobile="true"] {
   display: none;
 }
 
@@ -421,7 +427,9 @@ html.mobile [data-hidden-on-mobile=true] {
         }
 
         &:only-child {
-          box-shadow: inset 0 11px 8px -10px #3333331a, inset 0 -11px 8px -10px #3333331a;
+          box-shadow:
+            inset 0 11px 8px -10px #3333331a,
+            inset 0 -11px 8px -10px #3333331a;
         }
 
         &.active {
@@ -432,13 +440,13 @@ html.mobile [data-hidden-on-mobile=true] {
       }
     }
 
-    [data-navigation-item-expanded=true] {
+    [data-navigation-item-expanded="true"] {
       .XDocsPageNavigationItemArrow {
         transform: rotate(180deg);
       }
     }
 
-    [data-navigation-submenu-shown=false] {
+    [data-navigation-submenu-shown="false"] {
       display: none;
     }
   }
@@ -472,11 +480,11 @@ html.mobile [data-hidden-on-mobile=true] {
       background-color: rgb(var(--bg-rgb));
     }
 
-    &:not(.active) [data-close-icon=true] {
+    &:not(.active) [data-close-icon="true"] {
       display: none;
     }
 
-    &.active [data-menu-icon=true] {
+    &.active [data-menu-icon="true"] {
       display: none;
     }
   }
@@ -504,7 +512,8 @@ html.mobile [data-hidden-on-mobile=true] {
       justify-content: center;
       margin-bottom: 3rem;
 
-      img, svg {
+      img,
+      svg {
       }
     }
 
@@ -533,7 +542,7 @@ html.mobile [data-hidden-on-mobile=true] {
         }
       }
 
-      a[data-is-next=true] {
+      a[data-is-next="true"] {
         margin-left: auto;
       }
     }
@@ -640,7 +649,8 @@ table {
   border-collapse: collapse;
   margin-bottom: 1rem;
 
-  th, td {
+  th,
+  td {
     padding: 0.5rem;
     border: 1px solid rgb(var(--border-rgb));
   }
@@ -812,7 +822,6 @@ hr {
     text-decoration: none;
     outline: none;
 
-
     &:focus {
       background-color: rgb(var(--hover-rgb));
     }
@@ -835,4 +844,22 @@ hr {
 .XDocsTableWrapper {
   overflow-x: auto;
   overflow-y: hidden;
+}
+
+h1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+
+.KDBTitleSubtext {
+  position: absolute;
+  right: 0;
+  bottom: -0.7em;
+  font-size: 0.35em;
+  font-weight: 400;
 }
